@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.header{
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url(C.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 8px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0;
+    
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    font-size: 18px;
+}
+
+nav .logo{
+    font-size: 20px;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 60px;
+}
+
+.header-content h1{
+    font-size: 60px;
+    color: black;
+}
+
+.header-content p{
+    font-size: 40px;
+    color: black;
+}
+
+.primary-btn{
+    padding: 10px 24px;
+    background-color: pink;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover{
+    background-color: plum;
+}
+
+#services{
+    display: flex;
+    margin-top: 120px;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#about{
+    display: flex;
+    margin-top: 120px;
+    justify-content: space-between;
+}
+
+.about-content{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-content h5{
+    font-size: 10px;
+    color: pink;
+    text-transform: uppercase;
+}
+
+#about img{
+    max-width: 100%;
+
+}
+
+.service{
+    width: 300px;
+
+}
+
+.service img{
+    max-width: 100%;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+h3{text-align: center;}

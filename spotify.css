@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.header{
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url(müzik.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 8px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0;
+    
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    font-size: 18px;
+}
+
+nav .logo{
+    font-size: 20px;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 60px;
+}
+
+.header-content h1{
+    font-size: 60px;
+    color: black;
+}
+
+.header-content p{
+    font-size: 40px;
+    color: black;
+}
+
+.primary-btn{
+    padding: 10px 24px;
+    background-color: pink;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover{
+    background-color: plum;
+}
+
+.spoti-container{
+    display: flex;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+    justify-content: space-between;
+}
+
+.card-container{
+    display: grid;
+    row-gap: 3.5rem;
+}
+
+.card-article{
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image{
+    width: 328px;
+    border-radius: 1.5rem;
+}
+
+.card-data{
+    width: 250px;
+    background-color: grey;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -7rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+}
+
+.card-description{
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: .25rem;
+}
+
+.card-title{
+    font-size: var(--h2-font-size);
+    font-weight: 500;
+    color: pink;
+    margin-bottom: .75rem;
+}
+
+.card-buton{
+    text-decoration: none;
+    font-weight: 500;
+    color: pink;
+}
+
+.card-buton:hover{
+    text-decoration: underline;
+    
+}
+
+.card-article:hover .card-data{
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity 3s;
+}
+
+.card-article:hover{
+    animation: remove-overflow 2s forwards;
+
+}
+
+.card-article:not(:hover){
+    animation: show-overflow 2s forwards;
+}
+
+.card-article:not(:hover) .card-data{
+    animation: remove-data 1s forwards;
+}
+
+@keyframes show-data{
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(-7rem);
+    }
+}
+
+@keyframes remove-overflow{
+    to{
+        overflow: initial;
+    }
+}
+
+@keyframes remove-data{
+    0%{
+        transform: translateY(-7rem)
+    }
+        50%{
+        transform: translateY(-10rem)
+    }
+        100%{
+        transform: translateY(.5rem)
+    }
+}
+
+@keyframes show-overflow{
+    0%{
+        overflow: initial;
+        pointer-events: none;
+    }
+        50%{
+        overflow: hidden;
+    }
+}
+
+h1{
+    text-align: center;
+    margin-top: 10px;
+}
